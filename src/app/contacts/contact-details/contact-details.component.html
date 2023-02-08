@@ -1,0 +1,11 @@
+<!-- CONTACT DETAILS -->
+<div *ngIf="contact$ | async as contact">
+    <h3 class="detail-title">{{contact.name}}</h3>
+    <p>Id: {{contact.id}}</p>
+    <div>
+        <label for="contact-name">Name: </label>
+        <input type="text" id="contact-name" [(ngModel)]="contact.name" placeholder="Enter Name...">
+    </div>
+    <button type="button" (click)="gotoContacts(contact)">Back</button>
+</div>
+ 
